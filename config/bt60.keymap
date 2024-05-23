@@ -53,7 +53,7 @@
 		};
 		d_up {
 			bindings = <
-				&rgb_ug RGB_TOG &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(GRAVE) &kp LA(F4)
+				&rgb_ug RGB_TOG &rgb_ug RGB_HUI &rgb_ug RGB_HUD &rgb_ug RGB_SAI &rgb_ug RGB_SAD &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_SPI &rgb_ug RGB_SPD &rgb_ug RGB_EFF &rgb_ug RGB_EFR &trans &trans &kp LS(GRAVE) &kp LA(F4)
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp INS &kp LS(BSLH)
 				&trans   &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &kp HOME   &trans
 				&trans &none &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp END &kp LC(T) &none &trans
