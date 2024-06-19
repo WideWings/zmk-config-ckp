@@ -5,10 +5,10 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #define DEFAULT 	0
-#define d_code   	1
-#define d_down  	2
-#define d_up   		3
-#define arrows		4
+#define d_down  	1
+#define d_up   		2
+#define arrows		3
+#define d_code   	4
 
 / {
     macros {
@@ -122,7 +122,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp F14 &kp F15 &kp F16 &kp BSLH
 				&trans    &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &trans &trans &trans &trans &trans &trans &trans  &kp PAGE_UP   &trans
 				&trans &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &bt BT_CLR_ALL &trans &trans &kp LC(Z) &kp LC(Y) &kp PAGE_DOWN &trans &none &sys_reset
-				&trans &trans  &trans              &kp LS(MINUS)                            &kp LC(LS(TAB))  &trans &kp LC(TAB) &bl BL_CYCLE &none
+				&trans &trans  &trans              &kp LS(MINUS)                            &kp LC(LS(TAB))  &trans &kp LC(TAB) &tog d_code &none
 			>;
 			sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
 		};
@@ -144,7 +144,7 @@
 				&trans &none &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp UP &kp LG(E) &none &kp LG(D)
 				&trans &trans &trans              &trans                            &kp LEFT &kp DOWN &kp RIGHT &trans &none
 			>;
-			sensor-bindings = <&inc_dec_kp LC(Y) LC(Z)>;
+			sensor-bindings = <&inc_dec_kp UP DOWN>;
 		};
 	};
 };
