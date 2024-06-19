@@ -85,9 +85,27 @@
 	};
 	encoder_1: encoder_1 {
 		compatible = "alps,ec11";
+		label = "ENCODER_ONE";
 		a-gpios = <&gpio0 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		steps = <30>;
+		status = "okay";
+	};
+	encoder_2: encoder_2 {
+		compatible = "alps,ec11";
+		label = "ENCODER_TWO";
+		a-gpios = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		resolution = <4>;
+		status = "okay";
+	};
+	encoder_3: encoder_3 {
+		compatible = "alps,ec11";
+		label = "encoder_3";
+		a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		resolution = <4>;
+		status = "okay";
 	};
 	backlight: pwmleds {
 		compatible = "pwm-leds";
