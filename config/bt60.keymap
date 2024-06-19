@@ -11,6 +11,22 @@
 #define arrows		4
 
 / {
+    macros {
+        console_log: console_log {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp c &kp o &kp n &kp s &kp o &kp l &kp e &kp DOT &kp l &kp o &kp g>
+                , <&macro_press &kp LSHFT>
+				, <&macro_tap &kp N9 &kp N0>
+                , <&macro_release &kp LSHFT>
+				, <&macro_tap &kp SEMI>
+                ;
+        };
+    };
+};
+
+/ {
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -56,7 +72,7 @@
 				&bl BL_TOG &bl BL_INC &bl BL_DEC &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(GRAVE) &kp LA(F4)
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp INS &kp LS(BSLH)
 				&trans   &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &kp HOME   &trans
-				&trans &none &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp END &kp LC(T) &none &trans
+				&trans &none &trans &trans &console_log &trans &trans &trans &trans &trans &trans &kp END &kp LC(T) &none &trans
 				&trans &trans  &trans              &trans                            &kp LC(LS(T))  &kp LC(LS(ESC)) &kp LC(W) &kp LG(D) &none
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
