@@ -12,6 +12,65 @@
 
 / {
     macros {
+		jquery: jquery {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+				, <&macro_tap &kp N4 &kp N9>
+                , <&macro_release &kp LSHFT>
+				, <&macro_tap &kp SQT &kp SQT>
+				, <&macro_press &kp LSHFT>
+				, <&macro_tap &kp N0>
+                , <&macro_release &kp LSHFT>
+				, <&macro_tap &kp SEMI>
+                ;
+        };
+
+		div_s: div_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+				, <&macro_tap &kp COMMA>
+                , <&macro_release &kp LSHFT>
+				, <&macro_tap &kp D &kp I &kp V>
+				, <&macro_press &kp LSHFT>
+				, <&macro_tap &kp DOT>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+		div_e: div_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+				, <&macro_tap &kp COMMA>
+                , <&macro_release &kp LSHFT>
+				, <&macro_tap &kp FSLH &kp D &kp I &kp V>
+				, <&macro_press &kp LSHFT>
+				, <&macro_tap &kp DOT>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+		var_dump: var_dump {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp V &kp A &kp R>
+                , <&macro_press &kp LSHFT>
+				, <&macro_tap &kp MINUS>
+                , <&macro_release &kp LSHFT>
+				, <&macro_tap &kp D &kp U &kp M &kp P>
+				, <&macro_press &kp LSHFT>
+				, <&macro_tap &kp N9 &kp N0>
+                , <&macro_release &kp LSHFT>
+				, <&macro_tap &kp SEMI>
+                ;
+        };
+
         console_log: console_log {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -71,8 +130,8 @@
 			bindings = <
 				&bl BL_TOG &bl BL_INC &bl BL_DEC &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(GRAVE) &kp LA(F4)
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp INS &kp LS(BSLH)
-				&trans   &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &kp HOME   &trans
-				&trans &none &trans &trans &console_log &trans &trans &trans &trans &trans &trans &kp END &kp LC(T) &none &trans
+				&trans   &jquery &div_s &div_e &trans &trans &trans &trans &trans &trans &trans  &kp HOME   &trans
+				&trans &none &trans &trans &console_log &var_dump &trans &trans &trans &trans &trans &kp END &kp LC(T) &none &trans
 				&trans &trans  &trans              &trans                            &kp LC(LS(T))  &kp LC(LS(ESC)) &kp LC(W) &kp LG(D) &none
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
