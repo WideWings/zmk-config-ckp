@@ -24,6 +24,7 @@
 				, <&macro_tap &kp N0>
                 , <&macro_release &kp LSHFT>
 				, <&macro_tap &kp SEMI>
+				, <&macro_tap &kp LEFT &kp LEFT &kp LEFT>
                 ;
         };
 
@@ -68,6 +69,7 @@
 				, <&macro_tap &kp N9 &kp N0>
                 , <&macro_release &kp LSHFT>
 				, <&macro_tap &kp SEMI>
+				, <&macro_tap &kp LEFT &kp LEFT>
                 ;
         };
 
@@ -80,6 +82,20 @@
 				, <&macro_tap &kp N9 &kp N0>
                 , <&macro_release &kp LSHFT>
 				, <&macro_tap &kp SEMI>
+				, <&macro_tap &kp LEFT &kp LEFT>
+                ;
+        };
+
+		dd_l: dd_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp D &kp D>
+                , <&macro_press &kp LSHFT>
+				, <&macro_tap &kp N9 &kp N0>
+                , <&macro_release &kp LSHFT>
+				, <&macro_tap &kp SEMI>
+				, <&macro_tap &kp LEFT &kp LEFT>
                 ;
         };
     };
@@ -121,7 +137,7 @@
 				&bl BL_TOG &bl BL_INC &bl BL_DEC &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(GRAVE) &kp LA(F4)
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp INS &kp LS(BSLH)
 				&trans   &jquery &div_s &div_e &trans &trans &trans &trans &trans &trans &trans  &kp HOME   &trans
-				&trans &none &trans &trans &console_log &var_dump &trans &trans &trans &trans &trans &kp END &kp LC(T) &none &trans
+				&trans &none &trans &dd_l &console_log &var_dump &trans &trans &trans &trans &trans &kp END &kp LC(T) &none &trans
 				&trans &trans  &trans              &trans                            &kp LC(LS(T))  &kp LC(LS(ESC)) &kp LC(W) &kp LG(D) &none
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
