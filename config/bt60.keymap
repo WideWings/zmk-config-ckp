@@ -150,7 +150,7 @@
 				&trans &none &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp UP &kp LG(E) &none &kp LG(D)
 				&trans &trans &trans              &trans                            &kp LEFT &kp DOWN &kp RIGHT &trans &none
 			>;
-			sensor-bindings = <&inc_dec_kp UP DOWN>;
+			sensor-bindings = <&inc_dec_kp DOWN UP>;
 		};
 		d_code {
 			bindings = <
